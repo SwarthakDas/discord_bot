@@ -7,6 +7,18 @@ const commands = [
     name: 'ping',
     description: 'Replies with Pong!',
   },
+  {
+    name: 'friendbot',
+    description: 'Chat with a friendly AI bot',
+    options: [
+      {
+        name: 'message',
+        description: 'What do you want to say to the bot?',
+        type: 3,
+        required: true,
+      },
+    ],
+  },
 ];
 
 const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
